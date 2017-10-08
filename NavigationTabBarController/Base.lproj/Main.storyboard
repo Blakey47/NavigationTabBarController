@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0vg-qF-KEz">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,55 +9,151 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="RwJ-mL-tXn">
-            <objects>
-                <viewController id="VNi-2u-KCf" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="l5K-LK-9W3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="PYu-de-J19"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="gnG-0j-t4r"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F2O-IX-cjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="500" y="239"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="Ve5-ac-gnJ">
-            <objects>
-                <viewController id="FNh-lX-jzo" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KMy-dU-c2c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="AUr-KK-dS5"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="HrD-dn-HF7"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qld-8B-Rar" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="500" y="-425"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="7rB-dB-Jxz">
             <objects>
-                <tabBarController id="0vg-qF-KEz" sceneMemberID="viewController">
+                <tabBarController title="Tab Bar Controller" id="0vg-qF-KEz" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xW6-t9-yWa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="FNh-lX-jzo" kind="relationship" relationship="viewControllers" id="Gqy-p5-s2C"/>
-                        <segue destination="VNi-2u-KCf" kind="relationship" relationship="viewControllers" id="Xw9-5b-hHh"/>
+                        <segue destination="tVJ-16-oJx" kind="relationship" relationship="viewControllers" id="6ZP-Rq-s5q"/>
+                        <segue destination="GuF-Dx-bpF" kind="relationship" relationship="viewControllers" id="joz-Xo-8XZ"/>
+                        <segue destination="1HK-H2-icd" kind="relationship" relationship="viewControllers" id="W1c-Ra-LDF"/>
+                        <segue destination="SVc-7d-E8q" kind="relationship" relationship="viewControllers" id="Mrb-RQ-XcL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IJQ-2I-cLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="-93"/>
+            <point key="canvasLocation" x="-498" y="-208"/>
+        </scene>
+        <!--Car-->
+        <scene sceneID="qtR-hK-OZ6">
+            <objects>
+                <viewController id="1HK-H2-icd" customClass="HomeViewController" customModule="NavigationTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0SG-Xz-ajk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpH-WK-YsL">
+                                <rect key="frame" x="134" y="308" width="107" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Clothes"/>
+                                <connections>
+                                    <action selector="jumpToClothesTabWithSender:" destination="1HK-H2-icd" eventType="touchUpInside" id="FPV-63-4S5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dpH-WK-YsL" firstAttribute="centerY" secondItem="0SG-Xz-ajk" secondAttribute="centerY" id="CPq-ev-GxA"/>
+                            <constraint firstItem="dpH-WK-YsL" firstAttribute="centerX" secondItem="0SG-Xz-ajk" secondAttribute="centerX" id="e12-Pb-pVa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rmb-qS-hOH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Car" image="icons8-Car Filled-25" id="8Wq-hm-pc2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1xH-za-nF2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="175.86206896551727"/>
+        </scene>
+        <!--Clothes-->
+        <scene sceneID="HRO-QM-rJ3">
+            <objects>
+                <viewController id="SVc-7d-E8q" customClass="HomeViewController" customModule="NavigationTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2h6-fu-0sT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyF-Nl-l7G">
+                                <rect key="frame" x="98" y="268" width="178" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="jumpToHomeTabWithSender:" destination="SVc-7d-E8q" eventType="touchUpInside" id="Mi6-4b-88i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="pWw-ls-D2I"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Clothes" image="icons8-Clothes Filled-25" id="6zf-Ky-5hm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iX3-41-o5b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="900.89955022488766"/>
+        </scene>
+        <!--Shopping-->
+        <scene sceneID="XI3-vu-axY">
+            <objects>
+                <viewController id="GuF-Dx-bpF" customClass="HomeViewController" customModule="NavigationTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqL-um-bzY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nk0-3w-ojx">
+                                <rect key="frame" x="162.5" y="308" width="49" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="49" id="yhA-wf-bWq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Car"/>
+                                <connections>
+                                    <action selector="jumpToCarTabWithSender:" destination="GuF-Dx-bpF" eventType="touchUpInside" id="MHn-4K-Ruo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nk0-3w-ojx" firstAttribute="centerY" secondItem="kqL-um-bzY" secondAttribute="centerY" id="CFl-ob-T7W"/>
+                            <constraint firstItem="Nk0-3w-ojx" firstAttribute="centerX" secondItem="kqL-um-bzY" secondAttribute="centerX" id="yZD-vx-gzp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="le6-RT-BFf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Shopping" image="icons8-Add Shopping Cart-25" id="z5O-Dz-kpK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AS-tj-bzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="-551.87406296851577"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="ovt-82-duJ">
+            <objects>
+                <viewController id="tVJ-16-oJx" customClass="HomeViewController" customModule="NavigationTabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pan-Qd-OCK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xS4-Tf-MsU">
+                                <rect key="frame" x="120.5" y="307.5" width="133" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Shopping"/>
+                                <connections>
+                                    <action selector="jumpToShoppingTabWithSender:" destination="tVJ-16-oJx" eventType="touchUpInside" id="sAT-xV-1zD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xS4-Tf-MsU" firstAttribute="centerY" secondItem="Pan-Qd-OCK" secondAttribute="centerY" id="7Ph-nL-VQS"/>
+                            <constraint firstItem="xS4-Tf-MsU" firstAttribute="centerX" secondItem="Pan-Qd-OCK" secondAttribute="centerX" id="IBW-zz-cGu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eXB-Tb-S9z"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="icons8-Home Page-25" id="9JY-M8-oFc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WeE-M1-9XM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="-1334.4827586206898"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-Add Shopping Cart-25" width="25" height="25"/>
+        <image name="icons8-Car Filled-25" width="25" height="25"/>
+        <image name="icons8-Clothes Filled-25" width="25" height="25"/>
+        <image name="icons8-Home Page-25" width="25" height="25"/>
+    </resources>
 </document>
